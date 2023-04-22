@@ -13,10 +13,10 @@ RSpec.describe TextMessageSender do
         allow(Twilio::REST::Client).to receive(:new).and_return(client)
         allow(client).to receive(:message).and_return(message).with(
             from: 'your_twilio_phone_number',
-            to: '07586824326',
+            to: '07568765443',
             body: "Thank you! Your order was placed and will be delivered before 18:52"
         )
 
-        TextMessageSender.send_confirmation('07586824326', '18:52')
+        TextMessageSender.send_confirmation('07568765443', '18:52')
     end
 end
